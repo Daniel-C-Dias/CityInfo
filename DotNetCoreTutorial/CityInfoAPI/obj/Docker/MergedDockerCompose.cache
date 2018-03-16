@@ -1,0 +1,15 @@
+networks:
+  default:
+    external:
+      name: nat
+services:
+  cityinfoapi:
+    build:
+      context: C:\Git\DotNetCoreTutorial\CityInfoAPI
+      dockerfile: CityInfoAPI\Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: cityinfoapi
+    ports:
+    - 80/tcp
+version: '3.0'
